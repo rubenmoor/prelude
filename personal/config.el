@@ -1,0 +1,5 @@
+(setq prelude-packages (append '(lsp-haskell nix-mode) prelude-packages))
+(prelude-install-packages)
+(add-hook 'haskell-mode-hook #'lsp)
+(add-hook 'haskell-literate-mode-hook #'lsp)
+(add-to-list 'auto-mode-alist '("\\.nix\\'" . nix-mode))
